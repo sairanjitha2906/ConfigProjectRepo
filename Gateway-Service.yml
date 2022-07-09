@@ -21,8 +21,8 @@ spring:
           #uri: http://localhost:8081/
           predicates:
             - Path=/springfox/api/**
-       # - id: hello-producer
-         # uri: lb://hello-producer
+       - id: doctor-microservice
+         uri: lb://doctor-microservice
           #uri: http://localhost:8082/
-          #predicates:
-           # - Path=/hellop/**
+          predicates:
+           - Path=/springfox/api/**

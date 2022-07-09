@@ -8,7 +8,7 @@ eureka:
     hostname: localhost
   client:
     service-url:
-      default-zone: http://localhost:8761/Eureka-Registry-Server
+      default-zone: http://localhost:8761/eureka-registry-server
 
 spring:
   application:
@@ -20,9 +20,9 @@ spring:
           uri: lb://user-microservice
           #uri: http://localhost:8081/
           predicates:
-            - Path=/api/**
-       # - id: hello-producer
-         # uri: lb://hello-producer
+            - Path=/springfox/api/**
+       - id: doctor-microservice
+         uri: lb://doctor-microservice
           #uri: http://localhost:8082/
-          #predicates:
-           # - Path=/hellop/**
+          predicates:
+           - Path=/springfox/api/**

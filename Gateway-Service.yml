@@ -20,7 +20,7 @@ spring:
           uri: lb://user-microservice
           #uri: http://localhost:8081/
           predicates:
-            - Path=/users/**
+            - Path=/api/**
        # - id: hello-producer
          # uri: lb://hello-producer
           #uri: http://localhost:8082/

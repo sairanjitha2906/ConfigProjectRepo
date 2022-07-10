@@ -30,4 +30,4 @@ spring:
           uri: lb://patient-microservice
           #uri: http://localhost:8082/
           predicates:
-            - Path=/springfox/api/**
+            - Path=/springfox/doctorapi/**

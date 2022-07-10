@@ -22,7 +22,12 @@ spring:
           predicates:
             - Path=/springfox/api/**
         - id: doctor-microservice
-         uri: lb://doctor-microservice
+          uri: lb://doctor-microservice
           #uri: http://localhost:8082/
           predicates:
-           - Path=/springfox/api/**
+            - Path=/springfox/api/**
+        - id: patient-microservice
+          uri: lb://patient-microservice
+          #uri: http://localhost:8082/
+          predicates:
+            - Path=/springfox/api/**

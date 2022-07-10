@@ -31,3 +31,8 @@ spring:
           #uri: http://localhost:8082/
           predicates:
             - Path=/springfox/patientapi/**
+        - id: patientcasesheet-microservice
+          uri: lb://patientcasesheet-microservice
+          #uri: http://localhost:8082/
+          predicates:
+            - Path=/springfox/patientcasesheetapi/**
